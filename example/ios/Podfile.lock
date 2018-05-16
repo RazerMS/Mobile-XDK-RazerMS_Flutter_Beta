@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - molpay_mobile_xdk_flutter_beta (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Pods/.symlinks/flutter/ios`)
+  - molpay_mobile_xdk_flutter_beta (from `Pods/.symlinks/plugins/molpay_mobile_xdk_flutter_beta/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Pods/.symlinks/flutter/ios
+  molpay_mobile_xdk_flutter_beta:
+    :path: Pods/.symlinks/plugins/molpay_mobile_xdk_flutter_beta/ios
+
+SPEC CHECKSUMS:
+  Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
+  molpay_mobile_xdk_flutter_beta: 1ac9e1c28f9c865903979363d8d1b35d160707dd
+
+PODFILE CHECKSUM: 13dcf421f4da2e937a57e8ba760ed880beae536f
+
+COCOAPODS: 1.4.0
