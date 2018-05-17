@@ -12,3 +12,7 @@ flutter:
   plugin:
     androidPackage: com.molpay.molpaymobilexdkflutterbeta
     pluginClass: MolpayMobileXdkFlutterBetaPlugin
+
+environment:
+  sdk: ">=2.0.0-dev.43.0 <3.0.0"
+  flutter: ">=0.2.8 <2.0.0"
