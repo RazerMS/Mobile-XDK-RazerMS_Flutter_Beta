@@ -10,7 +10,7 @@
 
 @implementation MolpayMobileXdkFlutterBetaPlugin{
     FlutterResult _result;
-    NSDictionary *_paymentDetails;
+    NSMutableDictionary *paymentDetailsMutable;
     UIViewController *_viewController;
 }
 
@@ -34,7 +34,7 @@
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
     if([@"startMolpay"isEqualToString:call.method]){
         _result = result;
-        _paymentDetails = call.arguments;
+        paymentDetailsMutable = call.arguments;
         [self startMolpay];
     } else{
         result(FlutterMethodNotImplemented);
@@ -54,8 +54,13 @@
     // Default setting for Cash channel payment result conditions
     isPaymentInstructionPresent = NO;
     isCloseButtonClick = NO;
-    
-    mp = [[MOLPayLib alloc] initWithDelegate:self andPaymentDetails:_paymentDetails];
+
+    [paymentDetailsMutable setObject:[NSNumber numberWithBool:YES] forKey:@"is_submodule"];
+    [paymentDetailsMutable setObject:@"molpay-mobile-xdk-flutter-beta-ios" forKey:@"module_id"];
+    [paymentDetailsMutable setObject:@"0" forKey:@"wrapper_version"];
+
+    mp = [[MOLPayLib alloc] initWithDelegate:self andPaymentDetails:paymentDetailsMutable];
+
     mp.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Close"
                                                                             style:UIBarButtonItemStylePlain
                                                                            target:self
