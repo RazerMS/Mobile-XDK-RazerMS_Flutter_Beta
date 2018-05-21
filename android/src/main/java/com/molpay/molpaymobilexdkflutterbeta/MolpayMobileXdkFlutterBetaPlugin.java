@@ -46,6 +46,9 @@ public class MolpayMobileXdkFlutterBetaPlugin implements MethodCallHandler, Acti
   private void startMolpay(MethodCall call, Result result){ 
     Field[] fields = MOLPayActivity.class.getDeclaredFields();
     HashMap<String, Object> paymentDetails = new HashMap<>(); 
+    paymentDetails.put("is_submodule", true);
+    paymentDetails.put("module_id", "molpay-mobile-xdk-flutter-beta-android");
+    paymentDetails.put("wrapper_version", "0");
     for (Field f : fields) { 
         if(call.argument(f.getName()) != null){ 
             paymentDetails.put(f.getName(), call.argument(f.getName())); 
