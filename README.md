@@ -177,7 +177,7 @@ var paymentDetails = {
 import 'package:molpay_mobile_xdk_flutter_beta/molpay_mobile_xdk_flutter_beta.dart';
 
 //start molpay payment
-String result = await MolpayMobileXdkFlutterBeta.startMolpay(paymentDetails);
+String result = await molpay.startMolpay(paymentDetails);
 print("Result" + result);
 
 ```

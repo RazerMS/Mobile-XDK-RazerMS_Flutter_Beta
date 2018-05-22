@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 
-class MolpayMobileXdkFlutterBeta {
+class molpay {
   static const MethodChannel _channel =
       const MethodChannel('molpay_mobile_xdk_flutter_beta');
 

@@ -120,8 +120,7 @@ class _MyAppState extends State<MyApp> {
                     'mp_dev_mode': false
                   };
 
-                  String result = await MolpayMobileXdkFlutterBeta
-                      .startMolpay(paymentDetails);
+                  String result = await molpay.startMolpay(paymentDetails);
                   print("Result" + result);
                 },
               ),
