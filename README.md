@@ -51,6 +51,18 @@ Add the following keys to _Info.plist_ file for iOS:
 3) 'NSPhotoLibraryAddUsageDescription' > 'Payment images' 
 
 
+
+Add the following to _AndroidManifest.xml_ file for Android:
+
+1)  ```
+    <manifest 
+        xmlns:android="http://schemas.android.com/tools" >
+    ```
+2)  ```
+    <application
+        tools:replace="android:label" >
+    ```
+
 ## Sample Result
 
 ```
