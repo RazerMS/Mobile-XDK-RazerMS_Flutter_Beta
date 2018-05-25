@@ -50,6 +50,18 @@ Add the following keys to _Info.plist_ file for iOS:
 3) 'NSPhotoLibraryAddUsageDescription' > 'Payment images' 
 
 
+Add the following to _AndroidManifest.xml_ file for Android:
+
+1) ```
+    <manifest 
+    	xmlns:tools="http://schemas.android.com/tools" >
+
+    ```
+2) ```
+    <application
+        tools:replace="android:label" > 
+    ```
+
 ## Sample Result
 
 ```
@@ -189,7 +201,7 @@ print("Result" + result);
     
     2) The user can then click on “Close” to exit the MOLPay XDK aka the payment screen.
     
-    3) When later in time, the user would arrive at say 7-Eleven to make the payment, the host app then can call the XDK again to display the “Payment Instruction” again, then it has to pass in all the payment details like it will for the standard payment process, only this time, the host app will have to also pass in an extra value in the payment details, it’s the “mp_transaction_id”, the value has to be the same transaction returned in the results from the XDK earlier during the completion of the transaction. If the transaction id provided is accurate, the XDK will instead show the “Payment Instruction" in place of the standard payment screen.
+    3) When later in time, the user would arrive at say 7-Eleven to make the payment, the host app then can call the XDK again to display the “Payment Instruction” again, then it has to pass in all the payment details like it will for the standard payment process, only this time, the host app will have to also pass in an extra value in the payment details, it’s the “mp_transaction_id”, the value has to be the same transaction returned in the results from the XDK earlier during the completion of the transaction. If the transaction id provided is accurate, the XDK will instead show the “Payment Instruction” in place of the standard payment screen.
     
     4) After the user done the paying at the 7-Eleven counter, they can close and exit MOLPay XDK by clicking the “Close” button again.
 
@@ -197,10 +209,10 @@ print("Result" + result);
 
 Submit issue to this repository or email to our support@molpay.com
 
-Merchant Technical Support / Customer Care : support@molpay.com<br>
-Sales/Reseller Enquiry : sales@molpay.com<br>
-Marketing Campaign : marketing@molpay.com<br>
-Channel/Partner Enquiry : channel@molpay.com<br>
-Media Contact : media@molpay.com<br>
-R&D and Tech-related Suggestion : technical@molpay.com<br>
+Merchant Technical Support / Customer Care : support@molpay.com <br>
+Sales/Reseller Enquiry : sales@molpay.com <br>
+Marketing Campaign : marketing@molpay.com <br>
+Channel/Partner Enquiry : channel@molpay.com <br>
+Media Contact : media@molpay.com <br>
+R&D and Tech-related Suggestion : technical@molpay.com <br>
 Abuse Reporting : abuse@molpay.com

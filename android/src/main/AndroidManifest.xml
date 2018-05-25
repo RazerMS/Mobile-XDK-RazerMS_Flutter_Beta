@@ -2,6 +2,6 @@
   package="com.molpay.molpaymobilexdkflutterbeta">
  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.INTERNET"/>
-  <application android:theme="@style/Theme.AppCompat">
+  <application android:theme="@style/Theme.AppCompat.Light">
   </application>
 </manifest>
