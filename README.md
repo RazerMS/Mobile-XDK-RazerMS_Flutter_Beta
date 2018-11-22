@@ -24,7 +24,7 @@ This is the beta but functional MOLPay Flutter payment module that is ready to b
 
 ## Installation
 
-1) Add `molpay_mobile_xdk_flutter_beta` 
+1) Add `molpay_mobile_xdk_flutter_beta` in pubspec.yaml
 
 ```
 dependencies:

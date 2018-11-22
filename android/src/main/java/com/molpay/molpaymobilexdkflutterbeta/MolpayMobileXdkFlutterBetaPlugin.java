@@ -37,34 +37,48 @@ public class MolpayMobileXdkFlutterBetaPlugin implements MethodCallHandler, Acti
   @Override
   public void onMethodCall(MethodCall call, Result result) {
     if (call.method.equals("startMolpay")) {
-      startMolpay(call,result);
+      startMolpay(call, result);
     } else {
       result.notImplemented();
     }
   }
 
-  private void startMolpay(MethodCall call, Result result){ 
+  private void startMolpay(MethodCall call, Result result) {
     Field[] fields = MOLPayActivity.class.getDeclaredFields();
-    HashMap<String, Object> paymentDetails = new HashMap<>(); 
+    HashMap<String, Object> paymentDetails = new HashMap<>();
     paymentDetails.put("is_submodule", true);
     paymentDetails.put("module_id", "molpay-mobile-xdk-flutter-beta-android");
     paymentDetails.put("wrapper_version", "0");
-    for (Field f : fields) { 
-        if(call.argument(f.getName()) != null){ 
-            paymentDetails.put(f.getName(), call.argument(f.getName())); 
-    } 
-  } 
+    paymentDetails.put("mp_credit_card_no", call.argument(""));
+    paymentDetails.put("mp_credit_card_expiry", call.argument(""));
+    paymentDetails.put("mp_credit_card_cvv", call.argument(""));
 
-   Intent intent = new Intent(activity, MOLPayActivity.class);
-   intent.putExtra(MOLPayActivity.MOLPayPaymentDetails, paymentDetails);
-   activity.startActivityForResult(intent, MOLPayActivity.MOLPayXDK);
-   this.results = result; 
+    if (call.argument("mp_credit_card_no") != null) {
+      paymentDetails.put("mp_credit_card_no", call.argument("mp_credit_card_no"));
+    }
+    if (call.argument("mp_credit_card_expiry") != null) {
+      paymentDetails.put("mp_credit_card_expiry", call.argument("mp_credit_card_expiry"));
+    }
+    if (call.argument("mp_credit_card_cvv") != null) {
+      paymentDetails.put("mp_credit_card_cvv", call.argument("mp_credit_card_cvv"));
+    }
+    
+    for (Field f : fields) {
+      if (call.argument(f.getName()) != null) {
+        paymentDetails.put(f.getName(), call.argument(f.getName()));
+      }
+    }
+
+    Intent intent = new Intent(activity, MOLPayActivity.class);
+    intent.putExtra(MOLPayActivity.MOLPayPaymentDetails, paymentDetails);
+    activity.startActivityForResult(intent, MOLPayActivity.MOLPayXDK);
+    this.results = result;
   }
 
   @Override
   public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
-    if (requestCode == MOLPayActivity.MOLPayXDK && resultCode == Activity.RESULT_OK){
-        this.results.success(data.getStringExtra(MOLPayActivity.MOLPayTransactionResult));
+    if (requestCode == MOLPayActivity.MOLPayXDK && resultCode == Activity.RESULT_OK) {
+      this.results.success(data.getStringExtra(MOLPayActivity.MOLPayTransactionResult));
     }
     return true;
   }
