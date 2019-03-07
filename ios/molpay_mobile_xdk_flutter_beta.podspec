@@ -17,6 +17,7 @@ This is the beta but functional MOLPay Flutter payment module that is ready to b
   s.dependency 'Flutter'
   s.resource = 'MOLPayXDK.bundle' 
   s.vendored_frameworks = 'MOLPayXDK.framework'
+  s.static_framework = true
   
   s.ios.deployment_target = '8.0'
 end
