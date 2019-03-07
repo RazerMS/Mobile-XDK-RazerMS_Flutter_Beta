@@ -57,7 +57,7 @@
 
     [paymentDetailsMutable setObject:[NSNumber numberWithBool:YES] forKey:@"is_submodule"];
     [paymentDetailsMutable setObject:@"molpay-mobile-xdk-flutter-beta-ios" forKey:@"module_id"];
-    [paymentDetailsMutable setObject:@"0" forKey:@"wrapper_version"];
+    [paymentDetailsMutable setObject:@"1" forKey:@"wrapper_version"];
 
     mp = [[MOLPayLib alloc] initWithDelegate:self andPaymentDetails:paymentDetailsMutable];
 
