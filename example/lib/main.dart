@@ -58,8 +58,8 @@ class _MyAppState extends State<MyApp> {
                     // 'mp_is_escrow': '', // Optional for Escrow, put "1" to enable escrow
 
                     // Optional for credit card BIN restrictions
-                    'mp_bin_lock': ['414170', '414171'], // Optional for credit card BIN restrictions
-                    'mp_bin_lock_err_msg': 'Only UOB allowed', // Optional for credit card BIN restrictions
+                    // 'mp_bin_lock': ['414170', '414171'], // Optional for credit card BIN restrictions
+                    // 'mp_bin_lock_err_msg': 'Only UOB allowed', // Optional for credit card BIN restrictions
 
                     // For transaction request use only, do not use this on payment process
                     // 'mp_transaction_id': '', // Optional, provide a valid cash channel transaction id here will display a payment instruction screen.
@@ -78,7 +78,7 @@ class _MyAppState extends State<MyApp> {
                     // 'mp_is_recurring': false,
 
                     // Optional for channels restriction 
-                    'mp_allowed_channels': ['credit','credit3'],
+                    // 'mp_allowed_channels': ['credit','credit3'],
 
                     // Optional for sandboxed development environment, set boolean value to enable.
                     // 'mp_sandbox_mode': false,

@@ -57,7 +57,7 @@
 
     [paymentDetailsMutable setObject:[NSNumber numberWithBool:YES] forKey:@"is_submodule"];
     [paymentDetailsMutable setObject:@"molpay-mobile-xdk-flutter-beta-ios" forKey:@"module_id"];
-    [paymentDetailsMutable setObject:@"1" forKey:@"wrapper_version"];
+    [paymentDetailsMutable setObject:@"2" forKey:@"wrapper_version"];
 
     mp = [[MOLPayLib alloc] initWithDelegate:self andPaymentDetails:paymentDetailsMutable];
 
@@ -85,6 +85,20 @@
 {
     // Payment status results returned here
     NSLog(@"transactionResult result = %@", result);
+
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:result
+                                                       options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                         error:&error];
+    
+    NSString *resultString;
+    if (! jsonData) {
+        resultString = [NSString stringWithFormat:@"Error while converting result to json format: %@", error];
+    } else {
+        resultString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+    
+    _result(resultString);
     
     // All success cash channel payments will display a payment instruction, we will let the user to close manually
     if ([[result objectForKey:@"pInstruction"] integerValue] == 1 && isPaymentInstructionPresent == NO && isCloseButtonClick == NO)

@@ -48,7 +48,7 @@ public class MolpayMobileXdkFlutterBetaPlugin implements MethodCallHandler, Acti
     HashMap<String, Object> paymentDetails = new HashMap<>();
     paymentDetails.put("is_submodule", true);
     paymentDetails.put("module_id", "molpay-mobile-xdk-flutter-beta-android");
-    paymentDetails.put("wrapper_version", "1");
+    paymentDetails.put("wrapper_version", "2");
     paymentDetails.put("mp_credit_card_no", call.argument(""));
     paymentDetails.put("mp_credit_card_expiry", call.argument(""));
     paymentDetails.put("mp_credit_card_cvv", call.argument(""));
