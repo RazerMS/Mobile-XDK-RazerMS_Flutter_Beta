@@ -6,7 +6,7 @@
 
 # molpay_mobile_xdk_flutter_beta
 
-This is the beta but functional MOLPay Flutter payment module that is ready to be implemented into any Flutter project. An example application project is provided for MOLPayXDK framework integration reference.
+This is the beta but functional Razer Merchant Services Flutter payment module that is ready to be implemented into any Flutter project. An example application project is provided for MOLPayXDK framework integration reference.
 
 ## Recommended configurations
 
