@@ -4,7 +4,7 @@
 
 <img src="https://user-images.githubusercontent.com/38641542/39353138-654385dc-4a39-11e8-9710-19e5f03ec62e.jpg">
 
-# molpay_mobile_xdk_flutter_beta
+# rms_mobile_xdk_flutter_beta
 
 This is the beta but functional Razer Merchant Services Flutter payment module that is ready to be implemented into any Flutter project. An example application project is provided for MOLPayXDK framework integration reference.
 
