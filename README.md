@@ -107,7 +107,7 @@ var paymentDetails = {
     'mp_country' : 'MY',  
     
     // Optional String.
-    'mp_channel' : '', // Use 'multi' for all available channels option. For individual channel seletion, please refer to https://github.com/MOLPay/molpay-mobile-xdk-examples/blob/master/channel_list.tsv.
+    'mp_channel' : '', // Use 'multi' for all available channels option. For individual channel seletion, please refer to https://github.com/MOLPay/rms-mobile-xdk-examples/blob/master/channel_list.tsv
     'mp_bill_description' : '',
     'mp_bill_name' : '',
     'mp_bill_email' : '',
