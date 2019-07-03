@@ -39,3 +39,6 @@
 ## 0.26.0
 - Fixed bugs which caused mp_credit_card_no disappeared when mp_preferred_token is set to new
 - Fixed reversed CVV eye toggle
+
+## 0.27.0
+- Added mp_silent_error private parameter
