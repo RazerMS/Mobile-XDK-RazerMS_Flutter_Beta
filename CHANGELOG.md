@@ -42,3 +42,6 @@
 
 ## 0.27.0
 - Added mp_silent_error private parameter
+
+## 0.27.1
+- Migrate UIWebview to WKWebview
