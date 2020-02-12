@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
                   
                   var paymentDetails = {
                     // Mandatory String. A value more than '1.00'
-                    'mp_amount': '1.1',
+                    'mp_amount': '',
 
                     // Mandatory String. Values obtained from MOLPay
                     'mp_username': '',
@@ -41,18 +41,18 @@ class _MyAppState extends State<MyApp> {
                     'mp_verification_key': '',
 
                     // Mandatory String. Payment values
-                    'mp_order_ID': 'Flutter0002',
+                    'mp_order_ID': '',
                     'mp_currency': 'MYR',
                     'mp_country': 'MY',
 
                     // Optional String.
-                    'mp_channel': '', // Use 'multi' for all available channels option. For individual channel seletion, please refer to "Channel Parameter" in "Channel Lists" in the MOLPay API Spec for Merchant pdf. 
-                    'mp_bill_description': 'Flutter payment test',
-                    'mp_bill_name': 'anyname',
-                    'mp_bill_email': 'example@email.com',
-                    'mp_bill_mobile': '0161111111',
+                    'mp_channel': 'multi', // Use 'multi' for all available channels option. For individual channel seletion, please refer to "Channel Parameter" in "Channel Lists" in the MOLPay API Spec for Merchant pdf.
+                    'mp_bill_description': 'description',
+                    'mp_bill_name': 'name',
+                    'mp_bill_email': 'example@mail.com',
+                    'mp_bill_mobile': '+60123456789',
                     // 'mp_channel_editing': true, // Option to allow channel selection.
-                    'mp_editing_enabled': true, // Option to allow billing information editing.
+                    //'mp_editing_enabled': true, // Option to allow billing information editing.
 
                     // Optional for Escrow
                     // 'mp_is_escrow': '', // Optional for Escrow, put "1" to enable escrow
@@ -69,7 +69,7 @@ class _MyAppState extends State<MyApp> {
                     // 'mp_custom_css_url': '',
 
                     // Optional, set the token id to nominate a preferred token as the default selection, set "new" to allow new card only
-                    // 'mp_preferred_token': '',
+                    //'mp_preferred_token': '',
 
                     // Optional, credit card transaction type, set "AUTH" to authorize the transaction
                     // 'mp_tcctype': '',
@@ -87,6 +87,7 @@ class _MyAppState extends State<MyApp> {
                     // 'mp_express_mode': false,
                     // 'mp_bill_description_edit_disabled': false,
                     // 'mp_timeout' : 300,
+                    // 'mp_dev_mode' : true
                   };
 
                   String result = await molpay.startMolpay(paymentDetails);

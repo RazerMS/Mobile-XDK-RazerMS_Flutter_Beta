@@ -34,7 +34,7 @@ android {
 }
 
 dependencies {
-    api 'com.android.support:appcompat-v7:27.0.0' 
-    api 'com.android.support:design:27.0.0'
-    api 'com.molpay:molpay-mobile-xdk-android:3.27.0'
+    api 'com.android.support:appcompat-v7:27.1.0'
+    api 'com.android.support:design:27.1.0'
+    api 'com.molpay:molpay-mobile-xdk-android:3.27.1'
 }

@@ -45,3 +45,6 @@
 
 ## 0.27.1
 - Migrate UIWebview to WKWebview
+
+## 0.27.2
+- Enabled TNG e-wallet Tap to Pay

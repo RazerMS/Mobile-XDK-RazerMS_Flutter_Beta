@@ -14,9 +14,9 @@ EXTERNAL SOURCES:
     :path: Pods/.symlinks/plugins/molpay_mobile_xdk_flutter_beta/ios
 
 SPEC CHECKSUMS:
-  Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
-  molpay_mobile_xdk_flutter_beta: 1ac9e1c28f9c865903979363d8d1b35d160707dd
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  molpay_mobile_xdk_flutter_beta: 5b02bdb2019b78ba8f7ecbd600fd253f773edb2b
 
 PODFILE CHECKSUM: 13dcf421f4da2e937a57e8ba760ed880beae536f
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.8.4
