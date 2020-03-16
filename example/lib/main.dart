@@ -31,17 +31,26 @@ class _MyAppState extends State<MyApp> {
                   
                   var paymentDetails = {
                     // Mandatory String. A value more than '1.00'
-                    'mp_amount': '',
+                    'mp_amount': '49.00',
 
                     // Mandatory String. Values obtained from MOLPay
-                    'mp_username': '',
-                    'mp_password': '',
-                    'mp_merchant_ID': '',
-                    'mp_app_name': '',
-                    'mp_verification_key': '',
+
+                    // 'mp_username': 'SB_molpayxdk',
+                    // 'mp_password': 'cT54#Lk@22',
+                    // 'mp_merchant_ID': 'SB_molpayxdk',
+                    // 'mp_app_name': 'molpayxdk',
+                    // 'mp_verification_key': '4445db44bdb60687a8e7f7903a59c3a9',
+
+                    'mp_username': 'api_SB_arrivo',
+                    'mp_password': 'api_ArRv0124#',
+                    'mp_merchant_ID': 'SB_arrivo',
+                    'mp_app_name': 'arrivo',
+                    'mp_verification_key': '504fe277a79a2377f15f8640799b1b1f',
+                    
 
                     // Mandatory String. Payment values
-                    'mp_order_ID': '',
+                    // 'mp_order_ID': '60186547890TUC0002',
+                    'mp_order_ID': '60186547890',
                     'mp_currency': 'MYR',
                     'mp_country': 'MY',
 
@@ -87,11 +96,43 @@ class _MyAppState extends State<MyApp> {
                     // 'mp_express_mode': false,
                     // 'mp_bill_description_edit_disabled': false,
                     // 'mp_timeout' : 300,
-                    // 'mp_dev_mode' : true
+                    'mp_dev_mode' : true
                   };
 
+                  // String result = await molpay.startMolpay(paymentDetails);
+                  // print("Result" + result);
+
+                //  var paymentDetails = {
+
+  
+
+                //     "mp_username": "api_SB_arrivo",
+                //     "mp_amount": "40",
+                //     "mp_country": "MY",
+                //     "mp_password": "api_ArRv0124#",
+                //     "mp_express_mode": true,
+                //     // "wrapper_version": "1.0",
+                //     "mp_verification_key": "504fe277a79a2377f15f8640799b1b1f",
+                //     "mp_bill_mobile": "60186547890",
+                //     "mp_bill_email": "john.doe@hotmail.com",
+                //     "mp_order_ID": "60186547890TUC0001",
+                //     // "mp_credit_card_expiry": null,
+                //     "mp_merchant_ID": "SB_arrivo",
+                //     "mp_dev_mode": true,
+                //     // "module_id": "molpay-mobile-xdk-flutter-beta-android",
+                //     // "mp_credit_card_no": null,
+                //     "mp_bill_description": "RM 10 TOPUP",
+                //     "mp_channel": "maybank2u",
+                //     // "is_submodule": true,
+                //     // "mp_credit_card_cvv": null,
+                //     "mp_app_name": "arrivo",
+                //     "mp_bill_name": "John Doe",
+                //     "mp_currency": "MYR"
+                //   };
+                  
                   String result = await molpay.startMolpay(paymentDetails);
                   print("Result" + result);
+
                 },
               ),
             ],

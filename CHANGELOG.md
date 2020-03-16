@@ -48,3 +48,6 @@
 
 ## 0.27.2
 - Enabled TNG e-wallet Tap to Pay
+
+## 0.28.0
+- Updated URL for sandbox environment.
