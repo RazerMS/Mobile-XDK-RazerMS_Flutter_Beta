@@ -31,22 +31,14 @@ class _MyAppState extends State<MyApp> {
                   
                   var paymentDetails = {
                     // Mandatory String. A value more than '1.00'
-                    'mp_amount': '49.00',
+                    'mp_amount': '',
 
                     // Mandatory String. Values obtained from MOLPay
-
-                    // 'mp_username': 'SB_molpayxdk',
-                    // 'mp_password': 'cT54#Lk@22',
-                    // 'mp_merchant_ID': 'SB_molpayxdk',
-                    // 'mp_app_name': 'molpayxdk',
-                    // 'mp_verification_key': '4445db44bdb60687a8e7f7903a59c3a9',
-
-                    'mp_username': 'api_SB_arrivo',
-                    'mp_password': 'api_ArRv0124#',
-                    'mp_merchant_ID': 'SB_arrivo',
-                    'mp_app_name': 'arrivo',
-                    'mp_verification_key': '504fe277a79a2377f15f8640799b1b1f',
-                    
+                     'mp_username': '',
+                     'mp_password': '',
+                     'mp_merchant_ID': '',
+                     'mp_app_name': '',
+                     'mp_verification_key': '',
 
                     // Mandatory String. Payment values
                     // 'mp_order_ID': '60186547890TUC0002',
